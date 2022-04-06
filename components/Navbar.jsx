@@ -1,20 +1,22 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
-import styled from 'styled-components'
-import { Image, Box } from '@chakra-ui/react'
+import styled from '@emotion/styled'
+import logo from '../styles/images/Taylor-Logo-Fire-01.png'
 
 const Navbar = () => {
   return (
     <Nav>
         <div>
-            <Box boxSize='80px'>
                 <Image
-                src='https://i.imgur.com/m2GskYc.png'
+                src={logo}
+                width={50}
+                height={50}
                 alt='taylor-logo' 
                 objectFit="cover"
                 />
-            </Box>
         </div>
+        <LinkContainer>
         <div>
             <Link href="/" passHref>
                 <StyledLink>Home</StyledLink>
@@ -35,6 +37,7 @@ const Navbar = () => {
                 <StyledLink>Contact</StyledLink>
             </Link>
         </div>
+        </LinkContainer>
     </Nav>
   )
 }
@@ -51,6 +54,12 @@ const Nav = styled.nav`
 const StyledLink = styled.a`
     padding: 0rem 2rem;
 `;
+
+const LinkContainer = styled.div`
+    
+    display: flex;
+    align-items: center;
+`
 
 
 
