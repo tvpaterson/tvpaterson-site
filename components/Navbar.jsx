@@ -49,6 +49,7 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* background: blue; */
 `;
 
 const StyledLink = styled.a`
@@ -56,9 +57,9 @@ const StyledLink = styled.a`
 `;
 
 const LinkContainer = styled.div`
-    
+    /* background: red; */
     display: flex;
-    align-items: center;
+    align-items: right;
 `
 
 
